@@ -171,10 +171,7 @@ def test_stubgen(testcase: DataDrivenTestCase) -> None:
 
 
 def reset_importlib_caches() -> None:
-    try:
-        importlib.invalidate_caches()
-    except (ImportError, AttributeError):
-        pass
+    importlib.invalidate_caches()
 
 
 def load_output(entries: List[str]) -> List[str]:
